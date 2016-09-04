@@ -28,7 +28,7 @@ featureTestResults.foreach { result =>
     i += 1
 }
 ```
-&emsp;&emsp;另外，`spark.mllib`提供了一个`Kolmogorov-Smirnov (KS)`检测的`1-sample, 2-sided`实现，用来检测概率分布的相等性。通过提供理论分布（现在仅仅支持正太分布）的名字以及它相应的参数，
+&emsp;&emsp;另外，`spark.mllib`提供了一个`Kolmogorov-Smirnov (KS)`检测的`1-sample, 2-sided`实现，用来检测概率分布的相等性。通过提供理论分布（现在仅仅支持正态分布）的名字以及它相应的参数，
 或者提供一个计算累积分布(`cumulative distribution`)的函数，用户可以检测原假设或零假设(`null hypothesis`)：即样本是否来自于这个分布。用户检测正太分布，但是不提供分布参数，检测会默认该分布为标准正太分布。
 
 &emsp;&emsp;`Statistics`提供了一个运行`1-sample, 2-sided KS`检测的方法，下面就是一个应用的例子。
